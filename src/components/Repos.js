@@ -26,17 +26,12 @@ const Repos = () => {
     .sort((a, b) => {
       return b.value - a.value;
     })
-    // only want so show 5
     .slice(0, 5);
+  // only want so show 5
   // most star used
-  const mostPopular = Object.values(languages)
-    .sort((a, b) => {
-      return b.stars - a.stars;
-    })
-    .map((item) => {
-      return { ...item, value:item.stars };
-    })
-
+  const mostPopular = Object.values(languages).sort((a, b) => {
+    return b.stars - a.stars;
+  });
 
   const chartData = [
     {
@@ -57,8 +52,9 @@ const Repos = () => {
     <section className="section">
       <Wrapper className="section-center">
         <Pie3D data={mostUsed} />
-        <div></div>
+        <Column3D data={chartData} />
         <Doughnut2D data={mostPopular} />
+        <Bar3D data={chartData} />
         {/* <ExampleChart data={chartData} /> */}
       </Wrapper>
     </section>
