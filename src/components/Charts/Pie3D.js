@@ -40,3 +40,4 @@ const ChartComponet = ({ data }) => {
   return <ReactFC {...chartConfigs} />;
 };
 export default ChartComponet;
+
