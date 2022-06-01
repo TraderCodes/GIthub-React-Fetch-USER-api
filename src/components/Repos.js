@@ -24,7 +24,7 @@ const Repos = () => {
     .sort((a, b) => {
       return b.value - a.value;
     })
-    // only want so show 5 
+    // only want so show 5
     .slice(0, 5);
 
   const chartData = [
@@ -46,6 +46,8 @@ const Repos = () => {
     <section className="section">
       <Wrapper className="section-center">
         <Pie3D data={languages} />
+        <div></div>
+        <Doughnut2D data={languages} />  
         {/* <ExampleChart data={chartData} /> */}
       </Wrapper>
     </section>
